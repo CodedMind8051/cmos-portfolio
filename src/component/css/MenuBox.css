@@ -1,0 +1,82 @@
+
+.menu-box {
+  position: fixed;
+  top: 5%;
+  left: 100%;
+  /* adjust depending on your BarBox width */
+  height: 100%;
+  width: 0px;
+  /* background-color: rgba(68, 66, 66, 0.6); */
+  backdrop-filter: blur(5px);
+  color: white;
+  padding: 1px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 99;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 1%;
+  display: none;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  margin-top: 7%;
+  justify-content: center;
+  overflow-y: scroll;
+  flex-wrap: wrap;
+}
+
+
+.slide-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transform: translateX(1%);
+  display: none;
+  pointer-events: none;
+}
+
+.slide-out {
+    transform: translateX(0.8%);
+  /* width: 2605%; */
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: all;
+}
+
+/* App grid */
+.menu-box-appSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  /* max-width: 800px; */
+  width: 80%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual App Icon Link */
+.menu-box-appSection .glass-link {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.menu-box-appSection .glass-link:hover {
+  transform: scale(1.09);
+}
+
+/* Icon style */
+.menu-box-appSection  .glass-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  margin-bottom: 8px;
+}
+
+.hide-glass {
+  filter: blur(10px);
+  transition: filter 0.4s ease;
+}
+
