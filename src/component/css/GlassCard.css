@@ -8,15 +8,18 @@
   box-shadow: 0 8px 32px 0 rgba(126, 11, 11, 0.37);
   padding: 1.1rem;
   color: white;
-  width: 33%;
+  width: 28%;
   height: 10%;
+  align-items: center;
+  justify-content: center;
+
   text-align: center;
   top: 70%;
   left: 35%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 2%;
+  gap: 3%;
    opacity: 1;
   transform: translateY(0px);
   pointer-events: auto;

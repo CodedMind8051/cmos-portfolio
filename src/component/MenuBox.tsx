@@ -15,15 +15,13 @@ function MenuBox({ visible }: { visible: boolean }) {
       }
     }
   }, [visible]);
-  let links = [{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" },{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" },{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" },{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" }, { link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" }, { link: "icons/terminal.svg", bg: "black", hovertext: "Terminal" }, { link: "icons/notes.png", bg: "#eed509b8", hovertext: "Notes" }, { link: "/icons/CodedMind2.png", bg: "black", hovertext: "About me" }, { link: "/icons/photos.png", bg: "white", hovertext: "Photos" }, { link: "/icons/settings.png", bg: "#3d403f", hovertext: "Settings" }, { link: "/icons/github.png", bg: "black", hovertext: "Github" }]
+  let links = [{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" },{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" },{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" },{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" },{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" },{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" },{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" },{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" },{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" },{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" },{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" },{ link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" }, { link: "/icons/folderWhite.svg", bg: "#c01d1c", hovertext: "Projects" }, { link: "icons/terminal.svg", bg: "black", hovertext: "Terminal" }, { link: "icons/notes.png", bg: "#eed509b8", hovertext: "Notes" }, { link: "/icons/CodedMind2.png", bg: "black", hovertext: "About me" }, { link: "/icons/photos.png", bg: "white", hovertext: "Photos" }, { link: "/icons/settings.png", bg: "#3d403f", hovertext: "Settings" }, { link: "/icons/github.png", bg: "black", hovertext: "Github" }]
 
   return (
     <div className={`menu-box ${visible ? 'slide-out' : 'slide-in'}`} >
-        {/* <InputWithButton/> */}
+        <InputWithButton/>
       <div className="menu-box-appSection">
-
         {links.map((links: any, index: number) => (
-       
           <a key={index} href={links.link} className="glass-link">
             <img
               src={links.link}
@@ -31,7 +29,7 @@ function MenuBox({ visible }: { visible: boolean }) {
               className="glass-icon"
               style={{ backgroundColor: links.bg }}
             />
-            <div style={{position:"relative" , left:"-20%", color: 'white', marginTop: '4px', fontSize: '12px' }}>{links.hovertext}</div>
+            <div style={{position:"relative" , color: 'white', marginTop: '4px', fontSize: '12px' }}>{links.hovertext}</div>
           </a>
 
 

@@ -15,11 +15,6 @@ function BarBox() {
     { src: '/icons/CodedMind2.png', alt: 'Icon 1' }
   ];
 
-  // useEffect(() => {
-  //  onMenuToggle(ShowMenus);
-  // }, [ShowMenus])
-
-
   return (
     <>
 

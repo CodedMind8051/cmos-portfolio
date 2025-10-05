@@ -12,7 +12,7 @@ import {
 function TopBox() {
     return (
         <div className="TopBox">
-            <h3>Coded_Mind__</h3>
+            <h3 >Coded_Mind__</h3>
             <div className="TopBoxManue" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "90%" }}>
                 <Menubar>
                     <MenubarMenu>

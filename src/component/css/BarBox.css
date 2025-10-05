@@ -53,7 +53,7 @@
 }
 .TaskBar img:hover {
     transform: scale(1.2);
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.268);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(4px);
     
