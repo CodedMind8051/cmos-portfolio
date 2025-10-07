@@ -1,46 +1,91 @@
 .my-bark-file-manager {
-  background-color: #000; /* bark/dark background */
-  color: #e0e0e0;            /* light text for contrast */
-  border-radius: 8px;
-  font-family: 'Roboto', sans-serif;
-  padding: 10px;
-     border: none;
+
+   border: none;
 }
-.file-explorer{
-    background: #000;
-    max-height: 85%;
-    border: none;
-    
+
+.MainAppContainer {
+   background: rgba(26, 26, 31, 0.95);
+   backdrop-filter: blur(30px);
+   color: white;
+   border: none;
+}
+
+.TopHead {
+   background: rgba(35, 35, 35, 0.8);
+   backdrop-filter: blur(30px);
+   border-color: rgba(30, 26, 26, 0.441);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.file-explorer {
+   background: rgba(30, 30, 35, 0.95);
+   backdrop-filter: blur(30px);
+   color: white;
+   max-height: 85%;
+   border: none;
+
+
 }
 
 .toolbar {
-    background: #000;
-       border: none;
-}
-.item-action{
-    background: #000;
-       border: none;
-}
-.navigation-pane{
-    background: #000;
-       border: none;
+   background: rgba(35, 35, 35, 0.8);
+   backdrop-filter: blur(30px);
+   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+   align-items: center;
+   display: flex;
+   min-height: 10%;
+   max-height: 10%;
+   border-bottom-left-radius: 5%;
+   border-bottom-right-radius: 5%;
+   /* margin-bottom: 1%; */
 }
 
-.toolbar .item-action{
-    background: #000;
-       border: none;
+.bread-crumb-container .breadcrumb{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+.item-action {
+   background: #000;
+   border: none;
+}
+
+.navigation-pane {
+ background: rgba(35, 35, 35, 0.8);
+  backdrop-filter: blur(30px);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.fm-toolbar {
+   /* gap: 8%; */
+}
+
+.toolbar .item-action {
+   background: transparent;
+   /* border: solid; */
+}
+
+.file-explorer .files-container .navigation-pane .sidebar-resize{
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
 /* File items */
-.sb-folder-name  {
-  color: #af2424;
-     border: none;
+.sb-folder-name {
+   color: white;
+   border: none;
 }
 
 .grid {
-  color: #4a90e2;
-     border: none;
+   color: #4a90e2;
+   border: none;
 }
-.file-explorer .files-container .folders-preview{
-  background: #000;
-     border: none;
+
+
+
+.file-explorer .files-container .folders-preview {
+   background: rgba(30, 30, 35, 0.95);
+   backdrop-filter: blur(30px);
+   backdrop-filter: blur(30px);
+   border-color: rgba(255, 255, 255, 0.1);
+     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+   color: white;
 }
