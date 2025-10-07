@@ -1,0 +1,46 @@
+.my-bark-file-manager {
+  background-color: #000; /* bark/dark background */
+  color: #e0e0e0;            /* light text for contrast */
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+     border: none;
+}
+.file-explorer{
+    background: #000;
+    max-height: 85%;
+    border: none;
+    
+}
+
+.toolbar {
+    background: #000;
+       border: none;
+}
+.item-action{
+    background: #000;
+       border: none;
+}
+.navigation-pane{
+    background: #000;
+       border: none;
+}
+
+.toolbar .item-action{
+    background: #000;
+       border: none;
+}
+/* File items */
+.sb-folder-name  {
+  color: #af2424;
+     border: none;
+}
+
+.grid {
+  color: #4a90e2;
+     border: none;
+}
+.file-explorer .files-container .folders-preview{
+  background: #000;
+     border: none;
+}
