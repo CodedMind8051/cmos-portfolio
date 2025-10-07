@@ -1,29 +1,30 @@
 import { Button } from "@mantine/core";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Rnd } from "react-rnd";
 
-function AppWindow() {
-    const [WindowCloseState, setWindowCloseState] = useState<Boolean>(true)
-    const [WindowMinimizeState, setWindowMinimizeState] = useState<Boolean>(false)
-    const AppWindowRef = useRef<any>(null)
 
+
+interface AppWindowProps {
+    WindowState: boolean;
+    setWindow: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function AppWindow({ WindowState, setWindow }: AppWindowProps) {
+    const [WindowMinimizeState, setWindowMinimizeState] = useState<Boolean>(WindowState)
+    const [value, setValue] = useState("");
+    
 
     useEffect(() => {
-        if (WindowMinimizeState) {
-            // console.log()
-            AppWindowRef.current.style.background="red"
-        } else {
-
-        }
+        setWindowMinimizeState(WindowState)
+    }, [WindowState])
 
 
 
-    }, [WindowMinimizeState])
- AppWindowRef.current.style.background="red"
+
 
     return (
         <>
-            {WindowCloseState && (<Rnd  className="AppWindow" default={{ x: 440, y: 160, width: 800, height: 500 }} enableResizing={{
+            {WindowMinimizeState && (<Rnd className="AppWindow" default={{ x: 440, y: 160, width: 800, height: 500 }} enableResizing={{
                 top: true,
                 bottom: true,
                 left: true,
@@ -37,11 +38,12 @@ function AppWindow() {
                     <div style={{ border: "solid red" }} className="TopHead flex flex-row items-center justify-center">
                         <h1 className="font-bold relative left-[9%]">Hii</h1>
                         <div className="relative left-[40%]">
-                            <Button onClick={() => setWindowCloseState(false)}>Click</Button>
-                            <Button ref={AppWindowRef} onClick={() => { setWindowMinimizeState(true) }}>Minimize</Button>
+                            <Button onClick={() => setWindow(!WindowState)}>Minimize</Button>
+                            <Button >Click</Button>
                         </div>
                     </div>
                     <div style={{ border: "solid blue" }} className="h-[100%]">
+                        <input type="text" value={value} onChange={(e) => setValue(e.target.value)} placeholder="Type.." />
                         Your App Window
                     </div>
                 </div>
