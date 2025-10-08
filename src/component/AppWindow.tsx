@@ -1,6 +1,7 @@
-import { Button } from "@mantine/core";
+// import { Button } from "@mantine/core";
 import React, { useEffect, useState } from "react";
 import { Rnd } from "react-rnd";
+// import "public/icons/Minimize.svg"
 // @ts-ignore
 import { FileManager } from "@cubone/react-file-manager";
 import "@cubone/react-file-manager/dist/style.css";
@@ -22,15 +23,15 @@ function AppWindow({ WindowState, setWindow }: AppWindowProps) {
             updatedAt: "2024-09-09T10:30:00Z", // Last updated time
         },
         {
-            name: "Pictures",
+            name: "public",
             isDirectory: true,
-            path: "/Pictures", // Located in Root directory as well
+            path: "/public", // Located in Root directory as well
             updatedAt: "2024-09-09T11:00:00Z",
         },
         {
-            name: "Pic.png",
+            name: "1.jpg",
             isDirectory: false, // File
-            path: "/Pictures/Pc.png", // Located inside the "Pictures" folder
+            path: "/1.jpg", // Located inside the "Pictures" folder
             updatedAt: "2024-09-08T16:45:00Z",
             size: 2048, // File size in bytes (example: 2 KB)
         },
@@ -59,13 +60,13 @@ function AppWindow({ WindowState, setWindow }: AppWindowProps) {
                 <div style={{height: "100%" }} className="MainAppContainer rounded-md  text-white shadow-lg flex-col flex  ">
                     <div  className="rounded-t-md TopHead  flex flex-row items-center justify-center">
                         <h1 className="font-bold relative left-[9%]">File</h1>
-                        <div className="relative left-[40%]">
-                            {/* <Button onClick={() => setWindow(!WindowState)}>Minimize</Button>
-                            <Button >Click</Button> */}
+                        <div className="relative flex items-center gap-[60%] left-[40%]">
+                            <img className="cursor-pointer" src="/icons/Minimize.svg" alt=""  onClick={() => setWindow(!WindowState)}/>
+                             <img className="cursor-pointer" src="/icons/close.svg" alt="" />
                         </div>
                     </div>
                     <div  className="content h-[100%]">
-                        <FileManager cssClass="my-bark-file-manager" files={files} />
+                        <FileManager cssClass="my-bark-file-manager" files={files}   filePreviewPath=""/>
                     </div>
                 </div>
             </Rnd>)}</>
