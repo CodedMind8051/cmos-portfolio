@@ -30,7 +30,7 @@ function AppWindow({ WindowState, setWindow }: AppWindowProps) {
         {
             name: "Pic.png",
             isDirectory: false, // File
-            path: "/Pictures/Pic.png", // Located inside the "Pictures" folder
+            path: "/Pictures/Pc.png", // Located inside the "Pictures" folder
             updatedAt: "2024-09-08T16:45:00Z",
             size: 2048, // File size in bytes (example: 2 KB)
         },
