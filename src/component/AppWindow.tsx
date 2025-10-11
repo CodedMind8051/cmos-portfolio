@@ -5,23 +5,27 @@ import { Rnd } from "react-rnd";
 interface AppWindowProps {
     WindowState: boolean;
     setWindow: React.Dispatch<React.SetStateAction<boolean>>;
-    OpenApp: React.ComponentType;
+    OpenApp: React.ComponentType|null;
+    MenuShow:boolean|null
 }
 
 
 
 
 
-function AppWindow({ WindowState, setWindow, OpenApp }: AppWindowProps) {
+function AppWindow({ WindowState, setWindow, OpenApp ,MenuShow}: AppWindowProps) {
     const [WindowMinimizeState, setWindowMinimizeState] = useState<Boolean>(WindowState)
+    const rndClass = `AppWindow ${MenuShow ? "-z-3" : "z-3"}`;
 
     useEffect(() => {
         setWindowMinimizeState(WindowState)
     }, [WindowState])
+    
+
 
     return (
         <>
-            {WindowMinimizeState && (<Rnd className="AppWindow" default={{ x: 440, y: 160, width: 800, height: 500 }} enableResizing={{
+            {WindowMinimizeState && (<Rnd className={rndClass} default={{ x: 440, y: 160, width: 800, height: 500 }} enableResizing={{
                 top: true,
                 bottom: true,
                 left: true,
@@ -40,8 +44,7 @@ function AppWindow({ WindowState, setWindow, OpenApp }: AppWindowProps) {
                         </div>
                     </div>
                     <div className="content h-[100%]">
-
-                        <OpenApp/>
+                        {OpenApp &&<OpenApp/>}
 
                     </div>
                 </div>

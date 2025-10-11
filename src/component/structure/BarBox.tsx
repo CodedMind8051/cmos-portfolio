@@ -1,25 +1,24 @@
 import "../css/BarBox.css"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MenuBox from '../MenuBox';
 
 
-
-
-
-
-
-function BarBox() {
+function BarBox({setMenuShow}:any) {
   const [clicked, setClicked] = useState(false);
   const [ShowMenus, setShowMenus] = useState(false);
+   
+  useEffect(() => {
+   setMenuShow(ShowMenus)
+  }, [ShowMenus])
+  
+
   const icons = [
     { src: '/icons/CodedMind2.png', alt: 'Icon 1' }
   ];
 
   return (
     <>
-
       <div className="barbox">
-     
         <div className="TaskBar">
           {icons.map((icon, index) => (
             <img

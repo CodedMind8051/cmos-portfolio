@@ -6,16 +6,15 @@ import { useState } from "react";
 import AppWindow from "@/component/AppWindow";
 
 
-
 function FilePreview({ file }: any) {
-    console.log(file)
     return (
-
         <img src={file.path} alt="" />
     )
 }
 
+
 function Filemanager() {
+
     const [PrevieState, setPrevieState] = useState(false)
     const [fileObj, setfileObj] = useState("")
     const [files] = useState([
@@ -42,7 +41,13 @@ function Filemanager() {
     return (
         <>
             <FileManager onFileOpen={(file: any) => { setPrevieState(!PrevieState), setfileObj(file) }} cssClass="my-bark-file-manager" enableFilePreview={false} files={files} filePreviewPath="" />
-            <AppWindow WindowState={PrevieState} setWindow={setPrevieState} OpenApp={() => <FilePreview file={fileObj} />} /></>
+            <AppWindow
+                WindowState={PrevieState}
+                setWindow={setPrevieState}
+                OpenApp={() => <FilePreview file={fileObj} />}
+                MenuShow={null}
+            />,
+        </>
     )
 }
 
